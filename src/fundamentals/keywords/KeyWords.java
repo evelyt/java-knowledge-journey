@@ -29,7 +29,7 @@ public class KeyWords {
                 "instanceof (Checks the object's type)\n" +
                 "try, catch, finally (Approach handling blocks)\n" +
                 "throw (Throws an exception)\n" +
-                "throws (Declares approaches that the method can throw)");
+                "throws (Declares approaches that the method can throw)\n");
     }
 
 
