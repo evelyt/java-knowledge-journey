@@ -5,9 +5,11 @@ import static fundamentals.operators.LogicalOperators.logicalOperators;
 
 public class Main {
     public static void main(String[] args) {
+        //Practice
         keyWordsExamples();
         assignmentOperators();
         arithmeticOperators();
         logicalOperators();
+        //exercises
     }
 }
