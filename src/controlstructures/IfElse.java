@@ -4,19 +4,23 @@ public class IfElse {
     public static void main(String[] args){
         var name = "Camilla";
         var age = 16;
-        var emancipated = false;
+        var emancipated = true;
+
+        var canDrive = (age >= 18) || (age >=16 && emancipated);
+        var message = "";
 
         // If, else and else if
-        //Enter IF is true, otherwise, skip to the next line.
-        if(age >= 18)System.out.printf("%s you are %s years old, you can drive.\n",name,age);
-        //IF is false, execute else if:
-        else if(age >=16 && emancipated){
-            System.out.printf("%s you are %s years old and emancipated, you can drive.\n",name,age);
-        }
-        //Else if is false, execute else:
+        if(canDrive) message = name + " you are "+age+" years old, you can drive.\n";
         else{
-            System.out.printf("%s, you can't drive.\n",name);
+            message = name +", you can't drive.\n";
         }
+
+        /*
+        We can use ternary operator:
+        message = canDrive ? name + " you are "+age+" years old, you can drive.\n": name +", you can't drive.\n";
+        */
+
+        System.out.println(message);
     }
 
 }
