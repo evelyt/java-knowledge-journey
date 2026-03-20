@@ -11,7 +11,7 @@ public class Exercises {
         if(exercise == 1)firstExercise();
         if(exercise == 2)secondExercise();
         if(exercise == 3)thirdExercise();
-//        if(exercise == 4)fourExercise();
+        if(exercise == 4)fourExercise();
     }
 
     public static void firstExercise(){
@@ -69,8 +69,27 @@ public class Exercises {
            System.out.print(i+" ");
        }
     }
-//    public static void fourExercise(){
-//
-//    }
+    public static void fourExercise(){
+        System.out.println("4. Rest of the division");
+        var scanner = new Scanner(System.in);
+
+        System.out.println("Type the first number:");
+        var number = scanner.nextInt();
+
+        while(true){
+            System.out.println("Type the N number:");
+            var toVerify = scanner.nextInt();
+            if(toVerify < number) {
+                System.out.println("Type a number bigger than: "+number);
+                continue;
+            }
+            var result = toVerify % number;
+            System.out.printf("\n%s %% %s = %s \n",toVerify,number,result);
+            if (result != 0)break;
+        }
+
+
+
+    }
 }
 
