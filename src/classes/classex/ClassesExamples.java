@@ -1,4 +1,4 @@
-package classes;
+package classes.classex;
 
 public class ClassesExamples {
     /*
