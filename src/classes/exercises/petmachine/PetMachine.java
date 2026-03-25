@@ -6,12 +6,20 @@ public class PetMachine {
         private int shampoo = 10;
         private boolean clean = true;
 
-        public boolean hasPet(){return this.pet != null;}
+    public PetMachine() {
+    }
+
+    public boolean hasPet(){return this.pet != null;}
 
         public void takeAShower(){
-            setPet(this.pet);
-            this.water -=10;
-            this.shampoo -=2;
+            if(!hasPet()){
+                System.out.println("Add a pet to the machine");
+            }else{
+                this.water -=10;
+                this.shampoo -=2;
+                pet.setClean(true);
+                System.out.println("The "+pet.getName()+" is clean!");
+            }
         }
 
     public int getWater() {
