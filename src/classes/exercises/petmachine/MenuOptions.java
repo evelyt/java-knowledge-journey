@@ -7,8 +7,8 @@ public class MenuOptions {
     public final static Scanner scanner = new Scanner(System.in);
     public static PetMachine petMachine = new PetMachine();
 
-    public static void giveShower(){
-        System.out.println("Give a shower ");
+    public static void bathingPets(){
+        petMachine.bathingThePet();
     }
 
     public static void setPetInMachine(){

@@ -11,7 +11,7 @@ public class PetMachine {
 
     public boolean hasPet(){return this.pet != null;}
 
-        public void takeAShower(){
+        public void bathingThePet(){
             if(!hasPet()){
                 System.out.println("Add a pet to the machine");
             }else{

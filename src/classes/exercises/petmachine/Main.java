@@ -1,7 +1,5 @@
 package classes.exercises.petmachine;
 
-import classes.exercises.petmachine.MenuOptions;
-
 import java.util.Scanner;
 
 public class Main {
@@ -28,7 +26,7 @@ public class Main {
             option = scanner.nextInt();
 
             switch (option){
-                case 1 -> MenuOptions.giveShower();
+                case 1 -> MenuOptions.bathingPets();
                 case 7 -> MenuOptions.setPetInMachine();
             }
         }
