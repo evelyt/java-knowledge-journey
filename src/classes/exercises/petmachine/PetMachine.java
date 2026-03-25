@@ -48,13 +48,14 @@ public class PetMachine {
 
     public void setPet(Pet pet) {
         if(hasPet()){
-            System.out.printf("The %s%n is on machine!\n", pet.getName());
+            System.out.printf("The %s is on machine! %n", pet.getName());
             return;
         }
         if(!this.clean){
-            System.out.println("Dirty machine!\nIt's not possible to add a pet!");
+            System.out.println("Dirty machine! %n It's not possible to add a pet!");
             return;
         }
         this.pet = pet;
+        System.out.println("The pet "+ pet.getName()+" was placed in the machine");
     }
 }

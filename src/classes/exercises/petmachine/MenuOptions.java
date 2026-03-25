@@ -10,6 +10,7 @@ public class MenuOptions {
     public static void giveShower(){
         System.out.println("Give a shower ");
     }
+
     public static void setPetInMachine(){
         var name = "";
         while (name == null || name.isEmpty()){
@@ -18,7 +19,6 @@ public class MenuOptions {
         }
         var pet = new Pet(name);
         petMachine.setPet(pet);
-        System.out.println("The pet "+ pet.getName()+" was placed in the machine");
     }
 
 }
