@@ -27,6 +27,11 @@ public class Main {
 
             switch (option){
                 case 1 -> MenuOptions.bathingPets();
+                case 2 -> MenuOptions.fillWithWater();
+                case 3 -> MenuOptions.fillWithShampoo();
+                case 4 -> MenuOptions.verifyWaterLevel();
+                case 5 -> MenuOptions.verifyShampooLevel();
+                case 6 -> MenuOptions.verifyIfHasPetInMachine();
                 case 7 -> MenuOptions.setPetInMachine();
             }
         }
