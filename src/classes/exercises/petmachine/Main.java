@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     private final static Scanner scanner = new Scanner(System.in);
-    private static PetMachine petMachine = new PetMachine();
 
     public static void main(String[] args){
 
-        int option = -1;
+        int option;
 
         while(true){
             System.out.println(".......Make your choice: ");
