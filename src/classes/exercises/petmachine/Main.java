@@ -32,6 +32,10 @@ public class Main {
                 case 5 -> MenuOptions.verifyShampooLevel();
                 case 6 -> MenuOptions.verifyIfHasPetInMachine();
                 case 7 -> MenuOptions.setPetInMachine();
+                case 8 -> MenuOptions.removePetFromMachine();
+                case 9 -> MenuOptions.cleanTheMachine();
+                case 0 -> System.exit(0);
+                default -> System.out.println("Invalid option!");
             }
         }
     }
