@@ -6,16 +6,20 @@ public class MenuOptions {
 
     public final static Scanner scanner = new Scanner(System.in);
     public static PetMachine petMachine = new PetMachine();
-    public static String name = "";
+
 
     public static void setPetInMachine(){
-        System.out.println(name);
-        while (name == null || name.isEmpty()){
-            System.out.println("Type Pet name: ");
-            name = scanner.nextLine();
+        if(!petMachine.hasPet()){
+            var name = "";
+            while (name == null || name.isEmpty()){
+                System.out.println("Type Pet name: ");
+                name = scanner.nextLine();
+            }
+            var pet = new Pet(name);
+            petMachine.setPet(pet);
+        }else{
+            verifyIfHasPetInMachine();
         }
-        var pet = new Pet(name);
-        petMachine.setPet(pet);
     }
 
     public static void bathingPets(){
