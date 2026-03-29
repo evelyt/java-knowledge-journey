@@ -37,7 +37,7 @@ public class PetMachine {
         }
     }
     public void shampooLevel(){
-        System.out.println("Water Level: "+this.shampoo+" liters");
+        System.out.println("Shampoo Level: "+this.shampoo+" liters");
     }
     public boolean hasPet(){return this.pet != null;}
 
@@ -57,6 +57,7 @@ public class PetMachine {
         this.water -=10;
         this.shampoo -=2;
         pet.setClean(true);
+        this.clean = false;
         System.out.println("The "+pet.getName()+" is clean!");
     }
 
@@ -95,5 +96,20 @@ public class PetMachine {
         }
         this.pet = pet;
         System.out.println("The pet "+ pet.getName()+" was placed in the machine");
+    }
+
+    public void removePet() {
+        if(!hasPet()){
+            System.out.println("There are not pet in the machine!");
+            return;
+        }
+        System.out.println("The " + pet.getName()+" was removed from the machine!");
+        this.pet = null;
+    }
+
+    public void cleanMachine() {
+        this.clean = true;
+        this.water -=3;
+        this.shampoo -=1;
     }
 }

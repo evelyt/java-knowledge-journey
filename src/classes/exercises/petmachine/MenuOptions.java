@@ -6,9 +6,10 @@ public class MenuOptions {
 
     public final static Scanner scanner = new Scanner(System.in);
     public static PetMachine petMachine = new PetMachine();
+    public static String name = "";
 
     public static void setPetInMachine(){
-        var name = "";
+        System.out.println(name);
         while (name == null || name.isEmpty()){
             System.out.println("Type Pet name: ");
             name = scanner.nextLine();
@@ -39,5 +40,12 @@ public class MenuOptions {
 
     public static void verifyIfHasPetInMachine(){
         petMachine.verifyPet();
+    }
+    public static void removePetFromMachine(){
+        petMachine.removePet();
+    }
+
+    public static void cleanTheMachine() {
+        petMachine.cleanMachine();
     }
 }
