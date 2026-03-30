@@ -72,18 +72,24 @@ public class BankingOperations {
         System.out.println("Your account was successfully created.");
     }
     public void payment(float money){
-        if(this.balance == 0 || this.balance <0){
-            if(this.useOverdraft && overdraftLimit>=money){
-                this.overdraftLimit -=money;
+        if(this.useOverdraft){
+            float sumTaxa = (float) (money+(money*0.20));
+            if(this.overdraftLimit >= sumTaxa) {
+                this.overdraftLimit -= sumTaxa;
                 System.out.println("Payment made with overdraft facility");
-            }else{
-                System.out.println("Not enough funds to pay.");
+            }else {
+                System.out.println("balance (overdraft + usage fee) insufficient");
             }
-        }else {
-            this.balance -=money;
-            System.out.println("Payment successfully processed!");
+            return;
         }
+        if(!this.useOverdraft && this.balance <money){
+            System.out.println("Insufficient funds");
+            return;
+        }
+        this.balance -=money;
+        System.out.println("Payment successfully processed!");
     }
+
     public void withdrawMoney(float money){
         payment(money);
     }
@@ -97,4 +103,6 @@ public class BankingOperations {
         }
         System.out.println("This account is not using special checks.");
     }
+
+
 }
